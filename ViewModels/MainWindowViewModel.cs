@@ -11,13 +11,14 @@ namespace CV19.ViewModels
     {
         // создаем свойства для тестирования ViewModel
         #region Заголовок окна
+        private string _Title = "Анализ статистики CV19"; // для тестов захардкодим значение
+
         /// <summary>
         /// Заголовок окна
         /// </summary>
-        private string _title = "Анализ статистики CV19"; // для тестов захардкодим значение
         public string Title
         { 
-            //get => _title;
+            get => _Title;
             //set
             //{
             //    //if(Equals(_title, value)) return;
@@ -31,7 +32,7 @@ namespace CV19.ViewModels
             //}
             
             // Либо вообще сокращаем до одной строки:
-            set => Set(ref _title, value);
+            set => Set(ref _Title, value);
         }
 
         #endregion
