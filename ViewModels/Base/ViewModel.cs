@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CV19.ViewModels.Base
 {
+    /// <summary>
+    /// Базовый класс ViewModel, универсальный для проектов MVVM
+    /// </summary>
     internal abstract class ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
