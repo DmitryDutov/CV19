@@ -14,6 +14,11 @@
 	4.5. 30:20 - Infrastructure (доп инструменты)
 	4.6. 31:00 - Views
 		4.6.1 - Windows
-
-
-	
+5. 39:50 - Обзор паектов MVVM
+6. 42:50 - ViewModel
+	6.1. 42:55 - ViewModel.Base
+		6.1.1 44:20 - INotifyPropertyChanged
+		6.1.2 45:35 - Генерация событий для INotifyPropertyChanged
+			6.1.2.1 - 46:00 OnPropertyChanged()
+				6.1.2.1.1 - 47:00 Плюшки
+			6.1.2.2 - 47:50 
