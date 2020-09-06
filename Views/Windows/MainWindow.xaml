@@ -15,6 +15,8 @@
      </Window.DataContext>
 
     <Grid>
-        <TextBlock>Text</TextBlock>
+        <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+                 TextWrapping="Wrap"
+                 />
     </Grid>
 </Window>
