@@ -4,17 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-
         xmlns:vm="clr-namespace:CV19.ViewModels"
         xmlns:local="clr-namespace:CV19"
-        Title="{Binding Path=Title}"
+        Title="{Binding Title}"
         Height="450" 
         Width="800">
+        <!--Title="MainWindow"-->
     <Window.DataContext>
             <vm:MainWindowViewModel/>
      </Window.DataContext>
 
     <Grid>
-        
+        <TextBlock>Text</TextBlock>
     </Grid>
 </Window>
