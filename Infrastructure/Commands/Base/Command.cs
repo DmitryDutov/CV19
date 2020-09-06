@@ -7,12 +7,21 @@ using System.Windows.Input;
 
 namespace CV19.Infrastructure.Commands.Base
 {
-    internal class Command : ICommand
+    // Делаем метод абстрактным чтобы он стал универмальным
+    //internal class Command : ICommand
+    internal abstract class Command : ICommand
     {
-        public event EventHandler CanExecuteChanged;
+        // Передаём управление событиями классу CommandManager
+        public event EventHandler CanExecuteChanged
+        {
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
+        }
 
-        public bool CanExecute(object parameter) => throw new NotImplementedException();
+        //public bool CanExecute(object parameter) => throw new NotImplementedException();
+        //public void Execute(object parameter) => throw new NotImplementedException();
+        public abstract bool CanExecute(object parameter);
+        public abstract void Execute(object parameter);
 
-        public void Execute(object parameter) => throw new NotImplementedException();
     }
 }
