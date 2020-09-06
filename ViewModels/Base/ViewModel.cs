@@ -14,12 +14,16 @@ namespace CV19.ViewModels.Base
     internal abstract class ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
+        
+        // В метод передаём свойство (из любого класса) и гененрируем внутри событие (обновления)
+        // нужно чтобы не городить обновление свойств в каждом окне (или в каждом свойстве)
         protected virtual void OnPropertyChanged([CallerMemberName]string PropertyName = null) 
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
         }
 
+        // Метод обновляет значение свойства для которого определенно поле.
+        // передаём в это свойство новые значения
         protected virtual bool Set<T>(ref T field, T value, [CallerMemberName] string PropertyName = null) // предотвращаем обновление кольцевых свойств
         {
             if (Equals(field, value)) return false;
