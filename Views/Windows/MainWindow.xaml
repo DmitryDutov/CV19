@@ -15,8 +15,10 @@
      </Window.DataContext>
 
     <Grid>
-        <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+        <!--<TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
                  TextWrapping="Wrap"
-                 />
+                 />-->
+        <Slider Value="{Binding Title}"/>
+
     </Grid>
 </Window>
