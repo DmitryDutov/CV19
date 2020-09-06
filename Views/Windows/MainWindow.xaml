@@ -63,14 +63,17 @@
                                    StrokeThickness="3"
                                    RadiusX="5"
                                    RadiusY="7"
+                                   Margin="5"
                                    />
                         <Ellipse Grid.Column="1"
                                  Grid.Row="0"
                                  Fill="Red"
                                  Stroke="Blue"
                                  StrokeThickness="3"
+                                 Margin="5"
                                  />
                         <GridSplitter Grid.Column="0"
+                                      Grid.Row="0"
                                       HorizontalAlignment="Right"
                                       Width="5"
                                       />
