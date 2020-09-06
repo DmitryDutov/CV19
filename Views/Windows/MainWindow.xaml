@@ -70,6 +70,10 @@
                                  Stroke="Blue"
                                  StrokeThickness="3"
                                  />
+                        <GridSplitter Grid.Column="0"
+                                      HorizontalAlignment="Right"
+                                      Width="5"
+                                      />
                 </Grid>
                 </TabItem>
                 <TabItem Header="Вкладка 2"></TabItem>
