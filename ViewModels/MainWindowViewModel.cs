@@ -1,6 +1,7 @@
 ﻿using CV19.ViewModels.Base;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace CV19.ViewModels
         /// Заголовок окна
         /// </summary>
         public string Title
-        { 
+        {
             get => _Title;
             //set
             //{
@@ -30,11 +31,23 @@ namespace CV19.ViewModels
             //    Set(ref _title, value);
 
             //}
-            
+
             // Либо вообще сокращаем до одной строки:
             set => Set(ref _Title, value);
         }
 
+        #endregion
+
+        #region Status - Статус программы
+        /// <summary>
+        /// Статус программы
+        /// </summary>
+        private string _Status ="Готов";
+        public string Status
+        {
+            get => _Status;
+            set => Set(ref _Status, value);
+        }
         #endregion
     }
 }

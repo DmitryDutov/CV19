@@ -22,6 +22,5 @@ namespace CV19.Infrastructure.Commands.Base
         //public void Execute(object parameter) => throw new NotImplementedException();
         public abstract bool CanExecute(object parameter);
         public abstract void Execute(object parameter);
-
     }
 }
