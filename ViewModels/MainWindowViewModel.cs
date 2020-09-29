@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using CV19.Infrastructure.Commands.Base;
+using CV19.Infrastructure.Commands;
 
 namespace CV19.ViewModels
 {
@@ -56,7 +57,7 @@ namespace CV19.ViewModels
         // нужен ctor и region с описаним комманд
 
         #region Команды
-
+        // Команды можно описывать как внутри ViewModel, так и внутри другого класса
         #region CloseApplicationCommand
 
         // создаём свойство с типом ICommand

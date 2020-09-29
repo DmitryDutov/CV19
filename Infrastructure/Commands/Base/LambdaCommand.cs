@@ -1,11 +1,12 @@
-﻿using System;
+﻿using CV19.Infrastructure.Commands.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace CV19.Infrastructure.Commands.Base
+namespace CV19.Infrastructure.Commands
 {
     internal class LambdaCommand: Command
     {
