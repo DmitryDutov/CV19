@@ -25,7 +25,7 @@
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="Файл">
                     <MenuItem Header="Выход"
-                              Command="Copy"
+                              Command="{Binding ClosrAppkicationCommand}"
 
                               />
                 </MenuItem>
