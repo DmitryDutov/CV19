@@ -24,6 +24,10 @@
     <Window.DataContext>
             <vm:MainWindowViewModel/>
      </Window.DataContext>
+    <!--Создание релусрсов команд для окна-->
+    <Window.Resources>
+        <cmd:CloseApplicationCommand x:Key="CloseApplicationCommand"/>
+    </Window.Resources>
 
     <!--<Grid>
         --><!--<TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
@@ -36,14 +40,15 @@
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="Файл">
                 <!--<MenuItem Header="Выход" Command="{Binding ClosrAppkicationCommand}" />-->
-                <MenuItem Header="Выход">
-                    <!--Тут обращение из xmlns-->
+                <MenuItem Header="Выход" Command="{StaticResource CloseApplicationCommand}" />
+                <!--<MenuItem Header="Выход">
+                    --><!--Тут обращение из xmlns-->
                     <!--Очень затратный способ (не использовать если много элементов-->
-                    <!--В таком случае лучше создать словарь в App.xaml-->
+                    <!--В таком случае лучше создать словарь в App.xaml--><!--
                     <MenuItem.Command>
                         <cmd:CloseApplicationCommand/>
                     </MenuItem.Command>
-                </MenuItem>
+                </MenuItem>-->
             </MenuItem>
                 <MenuItem Header="Помощь">
                     <MenuItem Header="О программе"></MenuItem>
