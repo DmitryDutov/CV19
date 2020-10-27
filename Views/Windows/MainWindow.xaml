@@ -68,8 +68,14 @@
                 </StatusBarItem>
             </StatusBar>
             <TabControl>
-                <TabItem Header="Вкладка 1">
-                    <Grid>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Вкладка 1"/>
+
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
