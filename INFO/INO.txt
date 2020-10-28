@@ -62,7 +62,13 @@
 		8.2.10 2:41:25 Словари / Ресурсы команд (набор команд в App.xaml)
 		8.2.11 2:46:02 Векторные иконки
 
+9. 3:05:00 Логика
+	9.1 3:05:00 Сайт с данными https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
+	
+
+
 
 Примечания:
 1:45:10 переключение между ветвями Git
 2:46:50 пакеты в проектах (Nuget manager)
+2:58:40 Material Design для WPF (пакет)
