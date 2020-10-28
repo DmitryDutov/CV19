@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV19Console", "..\Tests\CV1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV19WPFTest", "..\Tests\CV19WPFTest\CV19WPFTest.csproj", "{E947B677-E2E0-4515-8464-9909B711F1DC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{15215A69-6145-46EC-9479-A7732AB843E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{947E70AC-0219-47A1-AC8E-05D2E94C6187} = {15215A69-6145-46EC-9479-A7732AB843E5}
+		{E947B677-E2E0-4515-8464-9909B711F1DC} = {15215A69-6145-46EC-9479-A7732AB843E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {881C12B0-A394-4BF9-B40A-A2BAEB6E7987}
