@@ -9,11 +9,21 @@ using System.Windows;
 using System.Windows.Input;
 using CV19.Infrastructure.Commands.Base;
 using CV19.Infrastructure.Commands;
+using CV19.Models;
 
 namespace CV19.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
+        #region TestDataPoints : IEnumerable - Тестовый набор данных для визуализации графиков
+        //Создаём свойство, которое возвращает перечисление точек данных для графика
+        private IEnumerable<DataPoint> _testDataPoints;
+        public IEnumerable<DataPoint> TestDataPoints
+        {
+            get=>_testDataPoints; set=>Set(ref _testDataPoints, value);
+        }
+        #endregion
+        
         // создаем свойства для тестирования ViewModel
         #region Заголовок окна
         private string _Title = "Анализ статистики CV19"; // для тестов захардкодим значение
