@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Infrastructure\Commands\Command.cs" />
     <Compile Include="Infrastructure\Commands\Base\LambdaCommand.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="ViewModels\Base\ViewModel.cs" />
     <Compile Include="Infrastructure\Commands\CloseApplicationCommand.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -105,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
