@@ -20,7 +20,8 @@ namespace CV19.ViewModels
         private IEnumerable<DataPoint> _testDataPoints;
         public IEnumerable<DataPoint> TestDataPoints
         {
-            get=>_testDataPoints; set=>Set(ref _testDataPoints, value);
+            get=>_testDataPoints; 
+            set=>Set(ref _testDataPoints, value);
         }
         #endregion
         
@@ -90,9 +91,20 @@ namespace CV19.ViewModels
             #region Команды
             // создаём значения комманд
             ClosrAppkicationCommand = new LambdaCommand(OnClosrAppkicationCommandExecuted, CanClosrAppkicationCommandExecute);
-            
+            #endregion
 
-            #endregion    
+            //создаём рисовалку линии
+            var data_points = new List<DataPoint>((int)(360 / 0.1));
+            for (var x = 0d; x <= 360; x += 0.1)
+            {
+                const double to_rad = Math.PI / 180;
+                var y = Math.Sin(x * to_rad);
+
+                data_points.Add(new DataPoint {Xvalue = x, Yvalue = y});
+            }
+
+            TestDataPoints = data_points;
         }
+
     }
 }
