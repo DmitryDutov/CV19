@@ -93,7 +93,7 @@ namespace CV19.ViewModels
             ClosrAppkicationCommand = new LambdaCommand(OnClosrAppkicationCommandExecuted, CanClosrAppkicationCommandExecute);
             #endregion
 
-            //создаём рисовалку линии
+            //создаём рисовалку линии (набили "БД" точек для графика)
             var data_points = new List<DataPoint>((int)(360 / 0.1));
             for (var x = 0d; x <= 360; x += 0.1)
             {
