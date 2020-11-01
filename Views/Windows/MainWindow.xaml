@@ -69,7 +69,7 @@
                                  />
                 </StatusBarItem>
             </StatusBar>
-            <TabControl>
+            <TabControl SelectedIndex="{Binding SelectedPagewIndex}">
             <TabItem Visibility="Collapsed">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">

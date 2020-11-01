@@ -15,6 +15,16 @@ namespace CV19.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
+        //Создаём свойство для нумерации вкладок
+        #region SelectedPagewIndex : int - Номер выборанной вкладки
+        private int _selectedPagewIndex = 0;
+        public int SelectedPagewIndex
+        {
+            get => _selectedPagewIndex;
+            set => Set(ref _selectedPagewIndex, value);
+        }
+        #endregion
+
         #region TestDataPoints : IEnumerable - Тестовый набор данных для визуализации графиков
         //Создаём свойство, которое возвращает перечисление точек данных для графика
         private IEnumerable<DataPoint> _testDataPoints;
