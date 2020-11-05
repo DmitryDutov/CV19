@@ -80,7 +80,6 @@ namespace CV19.ViewModels
         #region Команды
         // Команды можно описывать как внутри ViewModel, так и внутри другого класса
         #region CloseApplicationCommand
-
         // создаём свойство с типом ICommand
         public ICommand ClosrAppkicationCommand { get; }
         // теперь создаём два метода для команды
@@ -89,9 +88,18 @@ namespace CV19.ViewModels
             // Само действие команды (То что команда делает)
             Application.Current.Shutdown();
         }
-
         private bool CanClosrAppkicationCommandExecute(object p) => true;
+        #endregion
 
+        #region ChangeTabIndex
+        public ICommand ChangeTabIndexCommand { get; }
+        private bool CanChangeTabIndexCommandExecute(object p) => _selectedPagewIndex >= -0;
+
+        private void OnChangeTabIndexCommandExecute(object p)
+        {
+            if (!(p is int count))return;
+            SelectedPagewIndex += count;
+        }
         #endregion
 
         #endregion
@@ -101,8 +109,10 @@ namespace CV19.ViewModels
             #region Команды
             // создаём значения комманд
             ClosrAppkicationCommand = new LambdaCommand(OnClosrAppkicationCommandExecuted, CanClosrAppkicationCommandExecute);
+            ChangeTabIndexCommand = new LambdaCommand(OnChangeTabIndexCommandExecute, CanChangeTabIndexCommandExecute);
             #endregion
 
+            #region Данные для графика
             //создаём рисовалку линии (набили "БД" точек для графика)
             var data_points = new List<DataPoint>((int)(360 / 0.1));
             for (var x = 0d; x <= 360; x += 0.1)
@@ -114,6 +124,7 @@ namespace CV19.ViewModels
             }
 
             TestDataPoints = data_points;
+            #endregion
         }
 
     }

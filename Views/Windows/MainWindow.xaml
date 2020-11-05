@@ -12,7 +12,7 @@
         Title="{Binding Title}"
         Height="450" 
         Width="800">
-    
+
     <!--Пробуем привязку комманды на уровне окна-->
     <!--Закрытие окна по сочетанию Ctrl+Q-->
     <Window.InputBindings>
@@ -24,53 +24,67 @@
     </Window.InputBindings>
     <!--Title="MainWindow"-->
     <Window.DataContext>
-            <vm:MainWindowViewModel/>
-     </Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     <!--Создание релусрсов команд для окна-->
     <Window.Resources>
         <cmd:CloseApplicationCommand x:Key="CloseApplicationCommand"/>
     </Window.Resources>
 
     <!--<Grid>
-        --><!--<TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+        -->
+    <!--<TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
                  TextWrapping="Wrap"
                  />-->
-        <!--<Slider Value="{Binding Title}"/>--><!--
+    <!--<Slider Value="{Binding Title}"/>-->
+    <!--
     </Grid>-->
 
-        <DockPanel>
-            <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Файл">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
                 <!--<MenuItem Header="Выход" Command="{Binding ClosrAppkicationCommand}" />-->
                 <MenuItem Header="Выход" Command="{StaticResource CloseApplicationCommand}" />
                 <!--<MenuItem Header="Выход">
-                    --><!--Тут обращение из xmlns-->
-                    <!--Очень затратный способ (не использовать если много элементов-->
-                    <!--В таком случае лучше создать словарь в App.xaml--><!--
+                    -->
+                <!--Тут обращение из xmlns-->
+                <!--Очень затратный способ (не использовать если много элементов-->
+                <!--В таком случае лучше создать словарь в App.xaml-->
+                <!--
                     <MenuItem.Command>
                         <cmd:CloseApplicationCommand/>
                     </MenuItem.Command>
                 </MenuItem>-->
             </MenuItem>
-                <MenuItem Header="Помощь">
-                    <MenuItem Header="О программе"></MenuItem>
+            <MenuItem Header="Помощь">
+                <MenuItem Header="О программе"></MenuItem>
+                <MenuItem>
+                    <MenuItem.Header>
+                        <fa:ImageAwesome Height="12" Icon="ArrowCircleLeft"/>
+                    </MenuItem.Header>
                 </MenuItem>
-                
-            </Menu>
-            <StatusBar DockPanel.Dock="Bottom">
-                <StatusBarItem>
-                    <TextBlock Text="{Binding Status}"/>
-                </StatusBarItem>
+                <MenuItem>
+                    <MenuItem.Header>
+                        <fa:ImageAwesome Height="12" Icon="ArrowCircleRight"/>
+                    </MenuItem.Header>
+                </MenuItem>
+            </MenuItem>
 
-                <StatusBarItem>
-                    <ProgressBar Height="15"
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="{Binding Status}"/>
+            </StatusBarItem>
+
+            <StatusBarItem>
+                <ProgressBar Height="15"
                                  Width="120"
                                  Value="30"
                                  />
-                </StatusBarItem>
-            </StatusBar>
-            <TabControl SelectedIndex="{Binding SelectedPagewIndex}">
-            <TabItem Visibility="Collapsed">
+            </StatusBarItem>
+        </StatusBar>
+        <TabControl SelectedIndex="{Binding SelectedPagewIndex}">
+            <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon ="File"
@@ -81,17 +95,17 @@
                     </StackPanel>
                 </TabItem.Header>
                 <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        
-                        <Rectangle Grid.Column="0"
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Rectangle Grid.Column="0"
                                    Grid.Row="0"
                                    Fill="Blue"
                                    Stroke="Red"
@@ -100,32 +114,32 @@
                                    RadiusY="7"
                                    Margin="5"
                                    />
-                        <Ellipse Grid.Column="1"
+                    <Ellipse Grid.Column="1"
                                  Grid.Row="0"
                                  Fill="Red"
                                  Stroke="Blue"
                                  StrokeThickness="3"
                                  Margin="5"
                                  >
-                            <!--Если у элемента нет свойства Command, то можно привязать команду через действия пользователя-->
+                        <!--Если у элемента нет свойства Command, то можно привязать команду через действия пользователя-->
                         <!--MouseBinding.Command().MouseAction() / KeyBinding-->
-                                              <!--.Genture-->
+                        <!--.Genture-->
                         <Ellipse.InputBindings>
-                                <MouseBinding Command="{Binding ClosrAppkicationCommand}"
+                            <MouseBinding Command="{Binding ClosrAppkicationCommand}"
                                               MouseAction="LeftDoubleClick"
                                               />
-                            </Ellipse.InputBindings>
+                        </Ellipse.InputBindings>
 
-                        </Ellipse>
+                    </Ellipse>
 
-                        <GridSplitter Grid.Column="0"
+                    <GridSplitter Grid.Column="0"
                                       Grid.Row="0"
                                       HorizontalAlignment="Right"
                                       Width="5"
                                       />
                 </Grid>
-                </TabItem>
-                <TabItem Header="График">
+            </TabItem>
+            <TabItem Header="График">
                 <oxy:Plot>
                     <oxy:Plot.Axes>
                         <oxy:LinearAxis Position="Left"/>
@@ -137,9 +151,9 @@
                                     DataFieldY="Yvalue"
                                     />
                 </oxy:Plot>
-                </TabItem>
-                <TabItem Header="Вкладка 3" Visibility="Collapsed"></TabItem>
-            </TabControl>
-        </DockPanel>
+            </TabItem>
+            <TabItem Header="Вкладка 3"></TabItem>
+        </TabControl>
+    </DockPanel>
 
 </Window>
