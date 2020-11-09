@@ -6,5 +6,8 @@ namespace CV19.Models
 {
 
     //Модель информации о провинции
-    internal class ProvinceInfo : PlaceInfo { }
+    internal class ProvinceInfo : PlaceInfo
+    {
+
+    }
 }
