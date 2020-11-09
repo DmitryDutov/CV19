@@ -1,0 +1,21 @@
+Что ставим в первую очередь:
+	Компоненты:
+	- Разработка классических приложениц .NET
+	- Хранение и обработка данных
+	- Кроссплатформенная разработка .NET Core
+	- Инструменты для Entity Framework 6
+	- Инструменты LINQ to SQL
+	- Git для Windiws
+	- GitHub Extention for Visual Studio
+	- Диспетчер пакетов для NuGet
+	- Целевые пакеты для NuGet
+	
+	Если устрановлен VS Code:
+	- C#
+	- Bracket Pair Colorizer
+	- Docker
+	- Git Graph
+	- Git History
+	- GitLens
+	
+	
