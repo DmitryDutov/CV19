@@ -1,0 +1,15 @@
+R:\Korkiy\CV19\Tests\CV19WPFTest\bin\Release\CV19WPFTest.exe.config
+R:\Korkiy\CV19\Tests\CV19WPFTest\bin\Release\CV19WPFTest.exe
+R:\Korkiy\CV19\Tests\CV19WPFTest\bin\Release\CV19WPFTest.pdb
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest.csprojAssemblyReference.cache
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\MainWindow.g.cs
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\App.g.cs
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest_MarkupCompile.cache
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest_MarkupCompile.lref
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\MainWindow.baml
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest.g.resources
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest.Properties.Resources.resources
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest.csproj.GenerateResource.cache
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest.csproj.CoreCompileInputs.cache
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest.exe
+R:\Korkiy\CV19\Tests\CV19WPFTest\obj\Release\CV19WPFTest.pdb
